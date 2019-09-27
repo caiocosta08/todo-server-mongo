@@ -36,13 +36,7 @@ router.get('/list', async (req, res) => {
 });
 
 router.get('/bia', async (req, res) => {
-    res.send(
-        <div>
-            <h1>Clique no botão</h1>
-            <button onClick={() => alert('bia feia (:')}>CLIQUE AQUI</button>
-        
-        </div>
-    )
+    res.send('<div><h1>Clique no botão</h1><button onClick={() => alert("bia feia (:")}>CLIQUE AQUI</button></div>')
 });
 
 module.exports = app => {
