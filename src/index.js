@@ -55,6 +55,36 @@ app.get('/', function(req, res){
     res.render('index', { title: 'Hey', message: 'Hello there!'});
 })
 */
+
+//temporary routes
+app.get('/users', (req, res) => {
+    res.send({})
+});
+
+
+//temporary routes
+app.get('/tasks', (req, res) => {
+    res.send({})
+});
+
+
+//temporary routes
+app.get('/statuses', (req, res) => {
+    res.send({})
+});
+
+
+//temporary routes
+app.get('/scopes', (req, res) => {
+    res.send({})
+});
+
+
+//temporary routes
+app.get('/categories', (req, res) => {
+    res.send({})
+});
+
 app.listen( process.env.PORT || 8000, function(){
     var message = "Server running on port 8000 / IP to local network access: 192.168.43.194:8000"
     console.log(message);
