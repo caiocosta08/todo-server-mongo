@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -54,7 +55,7 @@ app.get('/', function(req, res){
     res.render('index', { title: 'Hey', message: 'Hello there!'});
 })
 */
-app.listen(8000, function(){
+app.listen( process.env.PORT || 8000, function(){
     var message = "Server running on port 8000 / IP to local network access: 192.168.43.194:8000"
     console.log(message);
 });
