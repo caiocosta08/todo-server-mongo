@@ -29,7 +29,7 @@ router.get('/list', async (req, res) => {
             user.password = undefined;
         })
 
-        return res.send({users});
+        return res.send(users);
     } catch (error) {
         return res.status(400).send({error: 'get users failed'})
     }
