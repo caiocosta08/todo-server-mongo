@@ -3,11 +3,15 @@ const dotenv = require('dotenv').config();
 
 const url = process.env.MONGO_URL;
 const local_url = 'mongodb://localhost/dbtodo';
-
-mongoose.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-mongoose.Promise = global.Promise;
+try{
+    mongoose.connect(url, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
+    mongoose.Promise = global.Promise;
+    console.log('Conexão estabelecida com sucesso!')
+}catch(error){
+    console.log('Erro: ' + error);
+}
 
 module.exports = mongoose;

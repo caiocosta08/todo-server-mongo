@@ -22,6 +22,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 require('./controllers/authController')(app);
+require('./controllers/scopesController')(app);
+require('./controllers/statusesController')(app);
+require('./controllers/categoriesController')(app);
+require('./controllers/tasksController')(app);
 
 //app.use('/', indexRouter);/*
 /*app.use('/profile', profileRouter);
@@ -50,11 +54,11 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
-/*
+
 app.get('/', function(req, res){
-    res.render('index', { title: 'Hey', message: 'Hello there!'});
+    res.send('Página inicial.');
 })
-*/
+
 
 //temporary routes
 app.get('/users', (req, res) => {
@@ -75,9 +79,10 @@ app.get('/statuses', (req, res) => {
 
 
 //temporary routes
+/*
 app.get('/scopes', (req, res) => {
     res.send({})
-});
+});*/
 
 
 //temporary routes
